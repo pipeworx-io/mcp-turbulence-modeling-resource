@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/turbulence-modeling-resource",
   "title": "Turbulence Modeling Resource",
   "description": "NASA Langley Turbulence Modeling Resource (TMR) — verification and validation cases for…",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "websiteUrl": "https://pipeworx.io/packs/turbulence-modeling-resource",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-turbulence-modeling-resource",

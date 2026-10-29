@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-turbulence-modeling-resource",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "NASA Langley Turbulence Modeling Resource (TMR) — verification and validation cases for turbulence-model developers.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-turbulence-modeling-resource": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "turbulence-modeling-resource"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-turbulence-modeling-resource.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/turbulence-modeling-resource",
   "pipeworx": {
-    "sourceHash": "v1-15d105bdb580d9c32a94cb75128a45ffb0e7312b29a47d29555fbed5ec2baa9d",
-    "sourceCommit": "5d8d3a58a457b8464c117515d81b8b6ecb53fdfb"
+    "mode": "gateway",
+    "slug": "turbulence-modeling-resource",
+    "gatewaySlug": "turbulence-modeling-resource",
+    "sourceHash": "v1-2a76a8074bb6b22568bb8c37fab7f119bad8cc2f6a04831a2cd86ef57f200cbc",
+    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
   }
 }

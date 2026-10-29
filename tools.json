@@ -1,0 +1,75 @@
+[
+  {
+    "name": "tmr_cases",
+    "description": "Catalog of NASA Langley Turbulence Modeling Resource (TMR) verification and validation cases for turbulence models — flat plates, bumps-in-channel, airfoils (NACA 0012, NACA 4412), axisymmetric jets, a backward-facing step, the NASA wall-mounted hump, shock/boundary-layer interactions, a supersonic square duct, the ONERA M6 wing, and a high-Reynolds-number channel flow. Each entry gives the case id to pass to tmr_reference_data, its category (verification vs. validation), flow regime, and documented Mach/Reynolds conditions.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "verification",
+            "validation-basic",
+            "validation-extended",
+            "validation-high-re",
+            "validation-numerics"
+          ],
+          "description": "Filter to one category. Omit for all cases."
+        }
+      }
+    }
+  },
+  {
+    "name": "tmr_reference_data",
+    "description": "Reference data (an experimental measurement or an established correlation, e.g. skin-friction coefficient Cf or lift/drag vs. angle of attack) for one NASA Langley Turbulence Modeling Resource case, as published by the case's own data file. Only available for a subset of cases — call tmr_cases first and check \"reference_data: true\" — because most TMR case directories hold dozens of individual turbulence-model CFD result files alongside the reference data, and this tool only serves files the case page itself unambiguously labels as the reference/experimental data.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "case": {
+          "type": "string",
+          "enum": [
+            "VERIF/2DZP",
+            "VERIF/2DCJ",
+            "VERIF/2DB",
+            "VERIF/2DANW",
+            "VERIF/2DMEA",
+            "VERIF/3DB",
+            "2DZP",
+            "2DML",
+            "2DANW",
+            "2DN00",
+            "ASJ",
+            "AHSJ",
+            "ANSJ",
+            "ASBL",
+            "ATB",
+            "2DZPH",
+            "2DBFS",
+            "2DN44",
+            "2DCC",
+            "2DWMH",
+            "ACC-SBLI",
+            "ACSSJ",
+            "AHSSJ",
+            "AJM163TM",
+            "AJM163H",
+            "AJM163OD",
+            "3DSSD",
+            "AISBLI",
+            "2DFFP",
+            "2DN00W",
+            "3DBMOD",
+            "3DSSDMOD",
+            "3DHC",
+            "3DOM6",
+            "2DFDC"
+          ],
+          "description": "Case id from tmr_cases, e.g. \"2DZP\"."
+        }
+      },
+      "required": [
+        "case"
+      ]
+    }
+  }
+]

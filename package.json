@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-turbulence-modeling-resource",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "NASA Langley Turbulence Modeling Resource (TMR) — verification and validation cases for turbulence-model developers.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "turbulence-modeling-resource",
     "gatewaySlug": "turbulence-modeling-resource",
-    "sourceHash": "v1-2a76a8074bb6b22568bb8c37fab7f119bad8cc2f6a04831a2cd86ef57f200cbc",
-    "sourceCommit": "f47d581679e1e887373df51ba623f891fbe4c464"
+    "sourceHash": "v1-2fe60bff04bc8b8aedd3e77df48f159a6264f94b8ab4651b29efcf8f25daec22",
+    "sourceCommit": "868e119d526d5409447b7ee2149afba7eb9d2593"
   }
 }
